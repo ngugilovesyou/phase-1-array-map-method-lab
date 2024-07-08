@@ -11,20 +11,18 @@ const tutorials = [
   'what is JSONP?'
 ];
 function titleCased() {
-  return tutorials.map(tutorial => {
-    // Split the tutorial title into individual words
+  // Split the tutorial title into individual words
+  // Capitalize the first letter of each word.
+  // Join the capitalized words back into a single string
+  return tutorials.map(function (tutorial) {
     const words = tutorial.split(' ');
-
-    // Capitalize the first letter of each word.
     const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
-
-    // Join the capitalized words back into a single string
     const titleCaseTutorial = capitalizedWords.join(' ');
 
     return titleCaseTutorial;
   });
 }
 
-console.log(titleCased());
+titleCased();
 
 
